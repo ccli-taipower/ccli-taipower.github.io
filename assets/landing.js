@@ -15,6 +15,13 @@
     };
   }
 
+  function buildCustomSchemeURL(type, p) {
+    const base = "bravo://" + type + "?";
+    const params = new URLSearchParams();
+    Object.keys(p).forEach(k => { if (p[k]) params.append(k, p[k]); });
+    return base + params.toString();
+  }
+
   function setText(sel, v) {
     const el = document.querySelector(sel);
     if (!el) return;
@@ -41,6 +48,13 @@
     }
   }
 
+  function setupOpenInApp(type, p) {
+    const btn = document.getElementById("openInAppBtn");
+    if (!btn || type === "home") return;
+    const url = buildCustomSchemeURL(type, p);
+    btn.href = url;
+  }
+
   window.BravoLanding = {
     init: function(type) {
       const p = getParams();
@@ -53,6 +67,7 @@
         setText("#itemProgram", p.program);
         setText("#itemDuration", p.duration);
       }
+      setupOpenInApp(type, p);
       setAppStoreButton();
     }
   };
