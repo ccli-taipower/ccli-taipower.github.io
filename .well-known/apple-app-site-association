@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["437N34D3P6.com.personal.BravoRadio"],
+        "components": [
+          { "/": "/program*" },
+          { "/": "/unit*" },
+          { "/": "/episode*" }
+        ]
+      }
+    ]
+  }
+}
