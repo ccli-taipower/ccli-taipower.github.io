@@ -1,23 +1,13 @@
-# ccli-taipower.github.io
+# ccli-taipower.github.io（已遷移）
 
-BravoRadio 網站 · BRAVO FM 91.3 非官方收聽 App
+此 repo 原為 BravoRadio 早期版本（Bundle ID：`com.personal.BravoRadio`）的 Universal Links / 分享著陸頁。
 
-## 檔案結構
+自 2026-04 起，BravoRadio 的正式網域已遷移至：
 
-```
-├── .well-known/
-│   └── apple-app-site-association   # Universal Links 設定（無副檔名）
-├── index.html                        # 首頁
-├── program/index.html                # 節目分享著陸頁
-├── unit/index.html                   # 單元分享著陸頁
-├── episode/index.html                # 曲目分享著陸頁
-└── assets/
-    ├── style.css
-    └── landing.js                    # 讀取 query string 填入資料 + App Store 連結
-```
+**→ https://bravo913.github.io/**
 
-## 上架後更新
+本 repo 目前僅保留重導向頁面（`index.html`、`/program/`、`/unit/`、`/episode/`），所有路徑會自動將使用者導向 `bravo913.github.io` 對應位置（包含 query string）。
 
-1. 編輯 `assets/landing.js`，把 `const APP_STORE_URL = ""` 填入 App Store URL
-2. 編輯 4 個 HTML 檔（首頁 + 三個著陸頁）的 "App 即將上架" 文字（已由 JS 自動覆蓋，通常不用改 HTML）
-3. commit + push，GitHub Pages 會自動部署
+舊版 App 分享出去、外界仍可能點擊的連結，會經由本重導向正確抵達新的著陸頁。
+
+— 李政崇 (Cheng-Chung Li)

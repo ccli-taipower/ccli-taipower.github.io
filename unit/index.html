@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>單元 · BravoRadio</title>
-  <meta name="description" content="BRAVO FM 91.3 · 用 BravoRadio App 收聽此單元">
-  <meta property="og:title" content="BravoRadio · 單元分享">
-  <meta property="og:description" content="BRAVO FM 91.3 · 用 BravoRadio App 收聽此單元">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="/assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bravo Radio — 連結已更新</title>
+<meta http-equiv="refresh" content="0; url=https://bravo913.github.io/">
+<script>
+  (function () {
+    var target = "https://bravo913.github.io" + window.location.pathname + window.location.search + window.location.hash;
+    window.location.replace(target);
+  })();
+</script>
+<style>
+  body { font-family: -apple-system, "PingFang TC", sans-serif; text-align: center; padding: 80px 20px; color: #2A2520; }
+  a { color: #C8622A; font-weight: 600; }
+</style>
 </head>
 <body>
-  <div class="masthead">
-    <span class="bar"></span>
-    <span class="eyebrow">BRAVO · FM 91.3 · 單元分享</span>
-  </div>
-
-  <main class="card">
-    <div class="type-label">UNIT · 精選單元</div>
-    <h1 class="title" id="itemName">正在載入…</h1>
-    <p class="meta"><strong>主持人</strong> <span id="itemHost"></span></p>
-    <p class="meta"><strong>時段</strong> <span id="itemSchedule"></span></p>
-
-    <div class="hairline"></div>
-
-    <div class="cta-group">
-      <a id="openInAppBtn" class="btn btn-primary">在 App 中開啟</a>
-      <a id="officialBtn" class="btn">在 Bravo FM 官網收聽</a>
-      <a id="downloadBtn" class="btn btn-disabled">App 即將上架</a>
-    </div>
-  </main>
-
-  <div class="footer">
-    BRAVO RADIO <span class="divider"></span> ESTABLISHED 91.3 MHz
-  </div>
-
-  <script src="/assets/landing.js"></script>
-  <script>BravoLanding.init("unit");</script>
+  <h2>Bravo Radio 連結已遷移</h2>
+  <p>正在帶您前往新位置…</p>
+  <p>若未自動跳轉，請點：<a id="go" href="https://bravo913.github.io/">前往新網址</a></p>
+<script>
+  document.getElementById("go").href = "https://bravo913.github.io" + window.location.pathname + window.location.search + window.location.hash;
+</script>
 </body>
 </html>
